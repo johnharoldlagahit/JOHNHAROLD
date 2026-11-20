@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>John Harold | Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 110px;
+    }
+
+    :root {
+        --black: #080808;
+        --dark: #111111;
+        --card: #17130d;
+        --gold: #D4AF37;
+        --light-gold: #F5D76E;
+        --white: #F8F5EC;
+        --border: #59451B;
+    }
+
+    body {
+        background: var(--black);
+        color: var(--white);
+        font-family: Arial, sans-serif;
+    }
+
+    .purple {
+        color: var(--gold);
+    }
+
+    .gradient-text {
+        background: linear-gradient(
+            90deg,
+            #B8860B,
+            #FFD700,
+            #F5D76E,
+            #B8860B
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .navbar {
+        background: rgba(8, 8, 8, 0.95);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 11px 15px;
+        border-radius: 12px;
+        color: #c5c0b5;
+        transition: 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: linear-gradient(90deg, #B8860B, #D4AF37);
+        color: #080808;
+        box-shadow: 0 0 18px #D4AF3755;
+        transform: translateY(-2px);
+    }
+
+    .glass-card {
+        background: linear-gradient(
+            145deg,
+            #1c1810,
+            #100e09
+        );
+        border: 1px solid #443719;
+        border-radius: 20px;
+        transition: 0.3s ease;
+    }
+
+    .glass-card:hover {
+        transform: translateY(-7px);
+        border-color: var(--gold);
+        box-shadow: 0 0 25px #D4AF3733;
+    }
+
+    .icon-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 15px;
+        background: #30250f;
+        color: var(--light-gold);
+    }
+
+    .primary-btn {
+        background: linear-gradient(
+            90deg,
+            #B8860B,
+            #FFD700
+        );
+        color: #080808;
+        box-shadow: 0 0 20px #D4AF3744;
+        transition: 0.3s;
+    }
+
+    .primary-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 30px #D4AF3799;
+    }
+
+    .outline-btn {
+        border: 1px solid var(--gold);
+        color: var(--light-gold);
+        transition: 0.3s;
+    }
+
+    .outline-btn:hover {
+        background: var(--gold);
+        color: #080808;
+    }
+
+    .profile-image {
+        border: 5px solid var(--gold);
+        border-radius: 30px;
+        box-shadow: 0 0 35px #D4AF3755;
+    }
+
+    .section {
+        padding: 90px 0;
+    }
+
+    .glow-circle {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        background: #D4AF37;
+        filter: blur(140px);
+        opacity: 0.15;
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    a:focus-visible {
+        outline: 3px solid var(--light-gold);
+        outline-offset: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+
+        *, *::before, *::after {
+            transition-duration: 0.01ms !important;
+        }
+    }
+</style> 
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header class="navbar fixed top-0 left-0 w-full z-50">
+        
+    <div class="max-w-6xl mx-auto px-5 py-4 flex flex-wrap justify-between items-center gap-3">
+
+        <a href="#home" class="text-xl font-bold tracking-wider">
+            HAROLD<span class="gradient-text">.</span>
+        </a>
+
+        <nav class="flex flex-wrap gap-2 text-sm" aria-label="Main navigation">
+
+            <a href="#home" class="nav-link active">
+                <i data-lucide="house" size="17"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#about" class="nav-link">
+                <i data-lucide="user" size="17"></i>
+                <span>About</span>
+            </a>
+
+            <a href="#skills" class="nav-link">
+                <i data-lucide="code-2" size="17"></i>
+                <span>Skills</span>
+            </a>
+
+            <a href="#projects" class="nav-link">
+                <i data-lucide="folder" size="17"></i>
+                <span>Projects</span>
+            </a>
+
+            <a href="#contact" class="nav-link">
+                <i data-lucide="mail" size="17"></i>
+                <span>Contact</span>
+            </a>
+
+        </nav>
+    </div>
+
+</header>
+
+
+<main class="max-w-6xl mx-auto px-6 pt-24">
+
+<!-- HOME SECTION -->
+<section id="home" class="section relative grid md:grid-cols-2 items-center gap-12">
+
+    <div class="glow-circle top-20 left-0"></div>
+
+    <div class="relative z-10">
+
+        <p class="purple font-semibold tracking-widest mb-5 text-sm">
+            WELCOME TO MY PORTFOLIO
+        </p>
+
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-5">
+            HI, I'M <br>
+            <span class="gradient-text">JOHN HAROLD</span>
+        </h1>
+
+        <h2 class="text-2xl text-slate-300 font-semibold mb-5">
+            First Year BSIT Student
+        </h2>
+
+        <p class="text-slate-400 text-lg leading-relaxed mb-8 max-w-xl">
+            I'm a beginner in Information Technology who is passionate
+            about learning programming, web development, and modern
+            technology. This portfolio represents my learning journey.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+
+            <a href="#projects"
+               class="primary-btn px-7 py-3 rounded-xl font-semibold">
+                Explore My Work
+                <i data-lucide="arrow-up-right" class="inline ml-2" size="18"></i>
+            </a>
+
+            <a href="#contact"
+               class="outline-btn px-7 py-3 rounded-xl font-semibold">
+                Contact Me
+            </a>
+
+        </div>
+
+        <div class="flex gap-5 mt-10 text-slate-400 text-sm">
+            <span><i data-lucide="map-pin" class="inline purple" size="15"></i> Cebu, Philippines</span>
+            <span><i data-lucide="graduation-cap" class="inline purple" size="15"></i> BSIT Student</span>
+        </div>
+
+    </div>
+
+
+    <div class="relative flex justify-center">
+
+        <div class="glow-circle"></div>
+
+        <div class="relative text-center">
+
+            <img src="assets\harold.jpg"
+                 alt="John Harold Lagahit"
+                 class="profile-image w-72 h-80 object-cover">
+
+            <h3 class="text-2xl font-bold mt-6">
+                JOHN HAROLD G. LAGAHIT
+            </h3>
+
+            <p class="purple mt-2">
+                Future IT Professional
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section border-t border-slate-800">
+
+    <div class="mb-12">
+        <p class="purple font-semibold tracking-widest text-sm">GET TO KNOW ME</p>
+        <h2 class="text-4xl font-bold mt-3">
+            About <span class="gradient-text">Me.</span>
+        </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+        <div>
+            <h3 class="text-2xl font-bold mb-5">
+                My Journey in Technology
+            </h3>
+
+            <p class="text-slate-400 leading-relaxed text-lg mb-5">
+                I'm John Harold Lagahit, a first-year Information
+                Technology student at Cordova Public College.
+                I chose IT because I want to understand how technology
+                works and learn how to create useful things using computers.
+            </p>
+
+            <p class="text-slate-400 leading-relaxed text-lg">
+                I'm still developing my skills in programming and
+                web development. Every project and school activity
+                helps me become more confident and knowledgeable.
+            </p>
+        </div>
+
+        <div class="glass-card p-7">
+
+            <div class="flex gap-4 items-center mb-7">
+
+                <div class="icon-box">
+                    <i data-lucide="graduation-cap"></i>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-xl">Education</h3>
+                    <p class="text-slate-400">Cordova Public College</p>
+                </div>
+
+            </div>
+
+            <div class="space-y-5 border-t border-slate-700 pt-6">
+
+                <div>
+                    <p class="purple text-sm">COURSE</p>
+                    <p class="font-semibold">Bachelor of Science in Information Technology</p>
+                </div>
+
+                <div>
+                    <p class="purple text-sm">YEAR LEVEL</p>
+                    <p class="font-semibold">First Year</p>
+                </div>
+
+                <div>
+                    <p class="purple text-sm">INTERESTS</p>
+                    <p class="font-semibold">Technology, Photography, Cycling, Music and Gaming</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="section border-t border-slate-800">
+
+    <div class="text-center mb-12">
+
+        <p class="purple font-semibold tracking-widest text-sm">
+            WHAT I'M LEARNING
+        </p>
+
+        <h2 class="text-4xl font-bold mt-3">
+            My <span class="gradient-text">Skills.</span>
+        </h2>
+
+        <p class="text-slate-400 mt-4">
+            Technologies and knowledge I'm developing as an IT student.
+        </p>
+
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- HTML5 -->
+        <article class="glass-card p-6">
+
+            <div class="icon-box mb-5">
+                <i data-lucide="code"></i>
+            </div>
+
+            <h3 class="text-xl font-bold mb-3">HTML5</h3>
+
+            <p class="text-slate-400">
+                Learning to create and structure web pages using
+                headings, paragraphs, links, images, and other elements.
+            </p>
+
+        </article>
+
+        </article>
+
+        <!-- Communication -->
+        <article class="glass-card p-6">
+
+            <div class="icon-box mb-5">
+                <i data-lucide="messages-square"></i>
+            </div>
+
+            <h3 class="text-xl font-bold mb-3">Communication</h3>
+
+            <p class="text-slate-400">
+                Improving my ability to share ideas, express thoughts,
+                and communicate effectively with others.
+            </p>
+
+        </article>
+
+        <!-- Problem Solving -->
+        <article class="glass-card p-6">
+
+            <div class="icon-box mb-5">
+                <i data-lucide="lightbulb"></i>
+            </div>
+
+            <h3 class="text-xl font-bold mb-3">Problem Solving</h3>
+
+            <p class="text-slate-400">
+                Learning to analyze challenges, think critically,
+                and find effective solutions to different problems.
+            </p>
+
+
+        </article>
+
+        <article class="glass-card p-6">
+
+            <div class="icon-box mb-5">
+                <i data-lucide="terminal"></i>
+            </div>
+
+            <h3 class="text-xl font-bold mb-3">Programming</h3>
+
+            <p class="text-slate-400">
+                Studying programming fundamentals, variables,
+                conditions, and loops.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="section border-t border-slate-800">
+
+    <div class="text-center mb-12">
+
+        <p class="purple font-semibold tracking-widest text-sm">
+            MY WORK
+        </p>
+
+        <h2 class="text-4xl font-bold mt-3">
+            Featured <span class="gradient-text">Projects.</span>
+        </h2>
+
+        <p class="text-slate-400 mt-4">
+            Some of my school activities and beginner projects.
+        </p>
+
+    </div>
+
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+    <!-- PROJECT 1: PROGRAMMING -->
+    <article class="glass-card p-5">
+
+        <img src="assets\prog.png"
+             alt="prog.png"
+             class="w-full h-48 object-cover rounded-xl mb-5">
+
+        <p class="purple text-sm font-semibold">01 / PROGRAMMING</p>
+
+        <h3 class="text-xl font-bold my-3">
+            Basic Programming
+        </h3>
+
+        <p class="text-slate-400 mb-5">
+            A beginner programming project where I practiced
+            writing code, using variables, and solving simple problems.
+        </p>
+
+        <a href="prog.png"
+           target="_blank"
+           class="purple font-semibold hover:text-fuchsia-400">
+            
+        </a>
+
+    </article>
+
+
+    <!-- PROJECT 2: HTML -->
+    <article class="glass-card p-5">
+
+        <img src="assets\HTML.png"
+             alt="HTML coding project"
+             class="w-full h-48 object-cover rounded-xl mb-5">
+
+        <p class="purple text-sm font-semibold">02 / HTML & CSS</p>
+
+        <h3 class="text-xl font-bold my-3">
+            HTML Web Development
+        </h3>
+
+        <p class="text-slate-400 mb-5">
+            A website project where I practiced using HTML
+            elements, headings, paragraphs, images, and CSS styling.
+        </p>
+
+        <a href="assets\HTML.png"
+           target="_blank"
+           class="purple font-semibold hover:text-fuchsia-400">
+           
+        </a>
+
+    </article>
+
+
+    <!-- PROJECT 3: FLOWCHART -->
+    <article class="glass-card p-5">
+
+        <img src="assets\FLOW.PNG"
+             alt="Flowchart project"
+             class="w-full h-48 object-cover rounded-xl mb-5">
+
+        <p class="purple text-sm font-semibold">03 / FLOWCHART</p>
+
+        <h3 class="text-xl font-bold my-3">
+            Problem-Solving Flowchart
+        </h3>
+
+        <p class="text-slate-400 mb-5">
+            A flowchart activity where I practiced organizing
+            steps, making decisions, and understanding program logic.
+        </p>
+
+        <a href="assets\FLOW.PNG"
+           target="_blank"
+           class="purple font-semibold hover:text-fuchsia-400">
+            
+        </a>
+
+    </article>
+
+</div>
+</section>
+
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section border-t border-slate-800">
+
+    <div class="text-center mb-12">
+
+        <p class="purple font-semibold tracking-widest text-sm">
+            LET'S CONNECT
+        </p>
+
+        <h2 class="text-4xl font-bold mt-3">
+            Contact <span class="gradient-text">Me.</span>
+        </h2>
+
+        <p class="text-slate-400 mt-4">
+            Have a project or want to connect? Feel free to reach out.
+        </p>
+
+    </div>
+
+
+    <div class="glass-card max-w-xl mx-auto p-8 text-center">
+
+        <div class="icon-box mx-auto mb-6">
+            <i data-lucide="mail"></i>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-3">
+            Get In Touch
+        </h3>
+
+        <p class="text-slate-400 mb-7">
+            You can contact me through my email address.
+        </p>
+
+        <a href="mailto:your-email@example.com"
+           class="primary-btn inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold">
+
+            <i data-lucide="send" size="18"></i>
+            Send Me an Email <br>
+            
+        </a>
+
+        <p class="text-slate-400 mb-10">
+            Johnharoldlagahit@gmail.com <br>
+            09473602910
+        </p> 
+
+        <div class="border-t border-slate-700 mt-8 pt-6 text-slate-400">
+
+            <p>
+                <i data-lucide="map-pin" class="inline purple" size="16"></i>
+                Cebu, Philippines
+            </p>
+
+            <p class="mt-2">Cordova Public College · BSIT</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <h3 class="text-xl font-bold">
+        HAROLD<span class="gradient-text">.</span>
+    </h3>
+
+    <p class="text-slate-500 text-sm mt-3">
+        © 2026 John Harold G. Lagahit. All Rights Reserved.
+    </p>
+
+    <p class="text-slate-600 text-sm mt-2">
+        Designed with passion and creativity.
+    </p>
+
+</footer>
+
+
+
+<script>
+
+    lucide.createIcons();
+
+    const links = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("main section");
+
+    links.forEach(link => {
+
+        link.addEventListener("click", function() {
+
+            links.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+        });
+
+    });
+
+
+    // Active navigation while scrolling
+    window.addEventListener("scroll", () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const sectionTop = section.offsetTop - 160;
+
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute("id");
+            }
+
+        });
+
+        links.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
+
+        });
+
+    });
+
+</script>
